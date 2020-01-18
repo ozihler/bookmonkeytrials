@@ -7,7 +7,10 @@ import {BookStoreService} from "../shared/book-store.service";
   template: `
     <a routerLink="">Zurück zur Übersicht</a>
     <div>
-      <bm-book-list-item *ngFor="let book of books" [book]="book"></bm-book-list-item>
+      <ul>
+          <bm-book-list-item *ngFor="let book of books" [book]="book" [routerLink]="book.isbn"></bm-book-list-item>
+
+      </ul>
     </div>
   `,
   styles: []
